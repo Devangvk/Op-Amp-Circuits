@@ -1,0 +1,10 @@
+* source TIMEMARKER
+X_U1A         N00157 0 VCC VEE N00490 TL084
+V_V1         VCC 0 15
+V_V2         0 VEE 15
+V_V3         N00157 0  AC 0
++SIN 0 2 1k 0 0 0
+C_C1         N00490 N00477  0.1u  TC=0,0 
+R_R1         0 N00477  1k TC=0,0 
+D_D1         N00477 N00494 D1N4001 
+R_R2         0 N00494  1k TC=0,0 

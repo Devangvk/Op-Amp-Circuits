@@ -1,0 +1,219 @@
+
+**** 06/03/23 21:20:35 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Transient"  [ c:\orcad projects\opamp circuits\vi converter bjt\vibjt-pspicefiles\schematic1\transient.sim ]
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Transient.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\devan\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 5m 0 0.1u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source VIBJT
+X_U1A         N00450 N00351 N00189 0 N00181 TL084
+V_V1         N00189 0 15
+R_R1         N00181 N01126  153 TC=0,0 
+V_V2         N00268 0 10
+R_R2         N00351 N00322  15k TC=0,0 
+R_R3         N00268 N00450  49.3k TC=0,0 
+R_R4         0 N00450  500 TC=0,0 
+R_R5         0 N00322  100m TC=0,0 
+R_R6         N00568 N00268  40m TC=0,0 
+Q_Q1         N00568 N01126 N00322 Q2N5882 
+
+**** RESUMING Transient.cir ****
+.END
+
+**** 06/03/23 21:20:35 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Transient"  [ c:\orcad projects\opamp circuits\vi converter bjt\vibjt-pspicefiles\schematic1\transient.sim ]
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1A.x_tl084.dx 
+          IS  800.000000E-18 
+
+
+               X_U1A.x_tl084.dy 
+          IS  800.000000E-18 
+          RS    1.000000E-03 
+         CJO   10.000000E-12 
+
+
+**** 06/03/23 21:20:35 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Transient"  [ c:\orcad projects\opamp circuits\vi converter bjt\vibjt-pspicefiles\schematic1\transient.sim ]
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Q2N5882         
+               NPN             
+       LEVEL    1            
+          IS   10.243000E-12 
+          BF  310.92         
+          NF    1            
+         VAF  100            
+         IKF    2.3775       
+         ISE   18.580000E-12 
+          NE    1.3372       
+          BR   30.084        
+          NR    1            
+         VAR  100            
+         IKR    3.9476       
+         ISC   17.559000E-12 
+          NC    1.28         
+          NK     .57406      
+         ISS    0            
+          RB     .55032      
+          RE    0            
+          RC     .046304     
+         CJE    1.670500E-09 
+         VJE     .35         
+         MJE     .46135      
+         CJC  677.240000E-12 
+         VJC     .35         
+         MJC     .33665      
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          TF    4.314000E-09 
+         XTF   10            
+         VTF   10            
+         ITF    1            
+          TR   55.360000E-09 
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 06/03/23 21:20:35 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Transient"  [ c:\orcad projects\opamp circuits\vi converter bjt\vibjt-pspicefiles\schematic1\transient.sim ]
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1A.x_tl084.jx1 
+               NJF             
+         VTO   -1            
+        BETA  222.070000E-06 
+          IS  100.000000E-12 
+
+
+               X_U1A.x_tl084.jx2 
+               NJF             
+         VTO   -1            
+        BETA  222.070000E-06 
+          IS  100.000000E-12 
+
+
+**** 06/03/23 21:20:35 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Transient"  [ c:\orcad projects\opamp circuits\vi converter bjt\vibjt-pspicefiles\schematic1\transient.sim ]
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00181)    2.0414 (N00189)   15.0000 (N00268)   10.0000 (N00322)     .1007     
+
+(N00351)     .1007 (N00450)     .1004 (N00568)    9.9601 (N01126)     .7680     
+
+(X_U1A.x_tl084.6) 454.0E-06           (X_U1A.x_tl084.7)    2.4575               
+
+(X_U1A.x_tl084.8)    2.4575           (X_U1A.x_tl084.9)    0.0000               
+
+(X_U1A.x_tl084.10)     .5109          (X_U1A.x_tl084.11)   14.5900              
+
+(X_U1A.x_tl084.12)   14.5910          (X_U1A.x_tl084.53)   12.6840              
+
+(X_U1A.x_tl084.54)    2.3158          (X_U1A.x_tl084.90)    8.3229              
+
+(X_U1A.x_tl084.91)   40.0000          (X_U1A.x_tl084.92)  -40.0000              
+
+(X_U1A.x_tl084.99)    7.5000          
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -1.149E-02
+    V_V2        -9.986E-01
+    X_U1A.x_tl084.vb   4.540E-09
+    X_U1A.x_tl084.vc   1.064E-11
+    X_U1A.x_tl084.ve  -3.271E-11
+    X_U1A.x_tl084.vlim   8.323E-03
+    X_U1A.x_tl084.vlp  -3.168E-11
+    X_U1A.x_tl084.vln  -4.832E-11
+
+    TOTAL POWER DISSIPATION   1.02E+01  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 06/03/23 21:20:35 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Transient"  [ c:\orcad projects\opamp circuits\vi converter bjt\vibjt-pspicefiles\schematic1\transient.sim ]
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        1.45
+
