@@ -1,0 +1,10 @@
+* source HWR
+X_U1A         0 N00298 VCC VEE N00402 TL084
+V_V1         VCC 0 15
+V_V2         0 VEE 15
+V_V3         N00291 0  AC 0
++SIN 0 2 1k 0 0 0
+R_R1         N00291 N00298  1k TC=0,0 
+X_D1         N00298 N00402 BAT54/PLP
+R_R2         N00298 N00453  1k TC=0,0 
+X_D2         N00402 N00453 BAT54/PLP

@@ -1,0 +1,198 @@
+
+**** 05/11/23 21:11:43 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Transient"  [ C:\OrCAD projects\Opamp Circuits\Inverting Amplifier\InvAmp-PSpiceFiles\SCHEMATIC1\Transient.s
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Transient.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\devan\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 10ms 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source INVAMP
+X_U1A         N00443 N00201 VCC VEE N00220 TL084
+V_V1         VCC GND 15
+V_V2         GND VEE 15
+R_R1         N00256 N00201  1k TC=0,0 
+R_R2         N00201 N00220  2k TC=0,0 
+V_V3         N00256 GND  
++SIN 0 5 10k 0 0 0
+R_R3         GND N00443  666 TC=0,0 
+
+**** RESUMING Transient.cir ****
+.END
+
+**** 05/11/23 21:11:43 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Transient"  [ C:\OrCAD projects\Opamp Circuits\Inverting Amplifier\InvAmp-PSpiceFiles\SCHEMATIC1\Transient.s
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1A.x_tl084.dx 
+          IS  800.000000E-18 
+
+
+               X_U1A.x_tl084.dy 
+          IS  800.000000E-18 
+          RS    1.000000E-03 
+         CJO   10.000000E-12 
+
+
+**** 05/11/23 21:11:43 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Transient"  [ C:\OrCAD projects\Opamp Circuits\Inverting Amplifier\InvAmp-PSpiceFiles\SCHEMATIC1\Transient.s
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1A.x_tl084.jx1 
+               NJF             
+         VTO   -1            
+        BETA  222.070000E-06 
+          IS  100.000000E-12 
+
+
+               X_U1A.x_tl084.jx2 
+               NJF             
+         VTO   -1            
+        BETA  222.070000E-06 
+          IS  100.000000E-12 
+
+
+**** 05/11/23 21:11:43 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Transient"  [ C:\OrCAD projects\Opamp Circuits\Inverting Amplifier\InvAmp-PSpiceFiles\SCHEMATIC1\Transient.s
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  GND)-2.437E+06  (  VCC)-2.437E+06  (  VEE)-2.437E+06  (N00201)-2.437E+06     
+
+(N00220)-2.437E+06 (N00256)-2.437E+06 (N00443)-2.437E+06                        
+
+(X_U1A.x_tl084.6)-774.9E-09           (X_U1A.x_tl084.7)-2.437E+06               
+
+(X_U1A.x_tl084.8)-2.437E+06           (X_U1A.x_tl084.9)    0.0000               
+
+(X_U1A.x_tl084.10)-2.437E+06          (X_U1A.x_tl084.11)-2.437E+06              
+
+(X_U1A.x_tl084.12)-2.437E+06          (X_U1A.x_tl084.53)-2.437E+06              
+
+(X_U1A.x_tl084.54)-2.437E+06          (X_U1A.x_tl084.90)-331.2E-06              
+
+(X_U1A.x_tl084.91)   40.0000          (X_U1A.x_tl084.92)  -40.0000              
+
+(X_U1A.x_tl084.99)-2.437E+06          
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -2.283E-02
+    V_V2        -2.283E-02
+    V_V3        -1.402E-08
+    X_U1A.x_tl084.vb  -7.796E-12
+    X_U1A.x_tl084.vc   1.269E-11
+    X_U1A.x_tl084.ve   3.336E-07
+    X_U1A.x_tl084.vlim  -3.312E-07
+    X_U1A.x_tl084.vlp  -4.000E-11
+    X_U1A.x_tl084.vln  -4.000E-11
+
+    TOTAL POWER DISSIPATION   6.85E-01  WATTS
+
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+
+ERROR(ORPSIM-15138): Convergence problem in Transient Analysis at Time =  125.0E-09.
+         Time step =  227.4E-21, minimum allowable step size =  1.000E-18
+
+  These voltages failed to converge:
+
+    V(X_U1A.x_tl084.90)       =   936.97mV  \   724.72mV
+
+  These supply currents failed to converge:
+
+    I(X_U1A.x_tl084.egnd)     =  -495.27uA  \  -283.02uA
+    I(V_V1)                   =   -23.26mA  \   -23.51mA
+    I(V_V2)                   =   -23.26mA  \   -23.51mA
+    I(X_U1A.x_tl084.vc)       =  -575.66uA  \  -333.76uA
+    I(X_U1A.x_tl084.ve)       =   436.88uA  \   678.77uA
+    I(X_U1A.x_tl084.vlim)     =   936.97uA  \   724.72uA
+
+  These devices failed to converge:
+    X_U1A.x_tl084.fb 
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  GND)-2.437E+06  (  VCC)-2.437E+06  (  VEE)-2.437E+06  (N00201)-2.437E+06     
+
+(N00220)-2.437E+06 (N00256)-2.437E+06 (N00443)-2.437E+06                        
+
+(X_U1A.x_tl084.6)    -.0024           (X_U1A.x_tl084.7)-2.437E+06               
+
+(X_U1A.x_tl084.8)-2.437E+06           (X_U1A.x_tl084.9)    0.0000               
+
+(X_U1A.x_tl084.10)-2.437E+06          (X_U1A.x_tl084.11)-2.437E+06              
+
+(X_U1A.x_tl084.12)-2.437E+06          (X_U1A.x_tl084.53)-2.437E+06              
+
+(X_U1A.x_tl084.54)-2.437E+06          (X_U1A.x_tl084.90)     .9370              
+
+(X_U1A.x_tl084.91)   40.0000          (X_U1A.x_tl084.92)  -40.0000              
+
+(X_U1A.x_tl084.99)-2.437E+06          
+
+
+**** Interrupt ****

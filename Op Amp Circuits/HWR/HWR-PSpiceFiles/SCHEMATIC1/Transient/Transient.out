@@ -1,0 +1,177 @@
+
+**** 06/05/23 21:27:49 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Transient"  [ c:\orcad projects\opamp circuits\hwr\hwr-pspicefiles\schematic1\transient.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Transient.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\devan\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 5m 0 0.1u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source HWR
+X_U1A         0 N00298 VCC VEE N00402 TL084
+V_V1         VCC 0 15
+V_V2         0 VEE 15
+V_V3         N00291 0  AC 0
++SIN 0 2 1k 0 0 0
+R_R1         N00291 N00298  1k TC=0,0 
+X_D1         N00298 N00402 BAT54/PLP
+R_R2         N00298 N00453  1k TC=0,0 
+X_D2         N00402 N00453 BAT54/PLP
+
+**** RESUMING Transient.cir ****
+.END
+
+**** 06/05/23 21:27:49 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Transient"  [ c:\orcad projects\opamp circuits\hwr\hwr-pspicefiles\schematic1\transient.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_D1.BAT54      X_D2.BAT54      
+          IS  211.700000E-09  211.700000E-09 
+           N    1.016           1.016        
+          BV   36              36            
+         IBV    1.196000E-06    1.196000E-06 
+          RS    2.637           2.637        
+         CJO   11.140000E-12   11.140000E-12 
+          VJ     .2013           .2013       
+           M     .3868           .3868       
+          FC    0               0            
+          EG     .69             .69         
+         XTI    2               2            
+
+
+               X_U1A.x_tl084.dx 
+          IS  800.000000E-18 
+
+
+               X_U1A.x_tl084.dy 
+          IS  800.000000E-18 
+          RS    1.000000E-03 
+         CJO   10.000000E-12 
+
+
+**** 06/05/23 21:27:49 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Transient"  [ c:\orcad projects\opamp circuits\hwr\hwr-pspicefiles\schematic1\transient.sim ] 
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1A.x_tl084.jx1 
+               NJF             
+         VTO   -1            
+        BETA  222.070000E-06 
+          IS  100.000000E-12 
+
+
+               X_U1A.x_tl084.jx2 
+               NJF             
+         VTO   -1            
+        BETA  222.070000E-06 
+          IS  100.000000E-12 
+
+
+**** 06/05/23 21:27:49 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Transient"  [ c:\orcad projects\opamp circuits\hwr\hwr-pspicefiles\schematic1\transient.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VCC)   15.0000  (  VEE)  -15.0000  (N00291)    0.0000 (N00298)-14.13E-06     
+
+(N00402)-904.6E-06 (N00453)-21.15E-06 (X_U1A.x_tl084.6) 85.35E-09               
+
+(X_U1A.x_tl084.7)-905.3E-06           (X_U1A.x_tl084.8)-905.3E-06               
+
+(X_U1A.x_tl084.9)    0.0000           (X_U1A.x_tl084.10)     .3992              
+
+(X_U1A.x_tl084.11)   14.5750          (X_U1A.x_tl084.12)   14.5750              
+
+(X_U1A.x_tl084.53)   12.6840          (X_U1A.x_tl084.54)  -12.6840              
+
+(X_U1A.x_tl084.90)-14.34E-06          (X_U1A.x_tl084.91)   40.0000              
+
+(X_U1A.x_tl084.92)  -40.0000          (X_U1A.x_tl084.99)    0.0000          
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -2.283E-02
+    V_V2        -2.283E-02
+    V_V3        -1.413E-08
+    X_U1A.x_tl084.vb   8.535E-13
+    X_U1A.x_tl084.vc   1.269E-11
+    X_U1A.x_tl084.ve   1.442E-11
+    X_U1A.x_tl084.vlim  -1.434E-08
+    X_U1A.x_tl084.vlp  -4.000E-11
+    X_U1A.x_tl084.vln  -4.000E-11
+
+    TOTAL POWER DISSIPATION   6.85E-01  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 06/05/23 21:27:49 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Transient"  [ c:\orcad projects\opamp circuits\hwr\hwr-pspicefiles\schematic1\transient.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        1.48
+

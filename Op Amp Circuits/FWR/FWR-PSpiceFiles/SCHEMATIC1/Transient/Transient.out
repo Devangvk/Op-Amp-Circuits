@@ -1,0 +1,223 @@
+
+**** 06/07/23 22:35:00 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Transient"  [ C:\OrCAD projects\Opamp Circuits\FWR\FWR-PSpiceFiles\SCHEMATIC1\Transient.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Transient.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\devan\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 5m 0 0.1u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source FWR
+X_U1A         0 N01220 VCC VEE N00208 TL084
+V_V1         VCC 0 15
+V_V2         0 VEE 15
+V_V3         N01056 0  AC 0
++SIN 0 2 1k 0 0 0
+D_D1         N01255 N00208 D1N4148 
+R_R1         N01056 N01220  1k TC=0,0 
+R_R2         N01220 N01255  1k TC=0,0 
+R_R3         N01220 N01336  1k TC=0,0 
+D_D2         N00208 N01336 D1N4148 
+X_U1B         N01336 N01468 VCC VEE N01472 TL084
+R_R4         N01255 N01468  1k TC=0,0 
+R_R5         N01468 N01472  1k TC=0,0 
+
+**** RESUMING Transient.cir ****
+.END
+
+**** 06/07/23 22:35:00 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Transient"  [ C:\OrCAD projects\Opamp Circuits\FWR\FWR-PSpiceFiles\SCHEMATIC1\Transient.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D1N4148         X_U1A.x_tl084.dx 
+          IS    2.682000E-09  800.000000E-18 
+           N    1.836                        
+         ISR    1.565000E-09                 
+         IKF     .04417                      
+          BV  100                            
+         IBV  100.000000E-06                 
+          RS     .5664                       
+          TT   11.540000E-09                 
+         CJO    4.000000E-12                 
+          VJ     .5                          
+           M     .3333                       
+
+
+               X_U1A.x_tl084.dy 
+          IS  800.000000E-18 
+          RS    1.000000E-03 
+         CJO   10.000000E-12 
+
+
+               X_U1B.x_tl084.dx 
+          IS  800.000000E-18 
+
+
+               X_U1B.x_tl084.dy 
+          IS  800.000000E-18 
+          RS    1.000000E-03 
+         CJO   10.000000E-12 
+
+
+**** 06/07/23 22:35:00 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Transient"  [ C:\OrCAD projects\Opamp Circuits\FWR\FWR-PSpiceFiles\SCHEMATIC1\Transient.sim ] 
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1A.x_tl084.jx1 
+               NJF             
+         VTO   -1            
+        BETA  222.070000E-06 
+          IS  100.000000E-12 
+
+
+               X_U1A.x_tl084.jx2 
+               NJF             
+         VTO   -1            
+        BETA  222.070000E-06 
+          IS  100.000000E-12 
+
+
+               X_U1B.x_tl084.jx1 
+               NJF             
+         VTO   -1            
+        BETA  222.070000E-06 
+          IS  100.000000E-12 
+
+
+               X_U1B.x_tl084.jx2 
+               NJF             
+         VTO   -1            
+        BETA  222.070000E-06 
+          IS  100.000000E-12 
+
+
+**** 06/07/23 22:35:00 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Transient"  [ C:\OrCAD projects\Opamp Circuits\FWR\FWR-PSpiceFiles\SCHEMATIC1\Transient.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VCC)   15.0000  (  VEE)  -15.0000  (N00208)    -.0475 (N01056)    0.0000     
+
+(N01220)-13.96E-06 (N01255)-25.69E-06 (N01336)-16.41E-06 (N01468)-30.54E-06     
+
+(N01472)-35.61E-06 (X_U1A.x_tl084.6) 4.475E-06                                  
+
+(X_U1A.x_tl084.7)    -.0475           (X_U1A.x_tl084.8)    -.0475               
+
+(X_U1A.x_tl084.9)    0.0000           (X_U1B.x_tl084.6) 3.389E-09               
+
+(X_U1B.x_tl084.7)-35.86E-06           (X_U1B.x_tl084.8)-35.86E-06               
+
+(X_U1B.x_tl084.9)    0.0000           (X_U1A.x_tl084.10)     .3992              
+
+(X_U1A.x_tl084.11)   14.5750          (X_U1A.x_tl084.12)   14.5750              
+
+(X_U1A.x_tl084.53)   12.6840          (X_U1A.x_tl084.54)  -12.6840              
+
+(X_U1A.x_tl084.90)-9.544E-06          (X_U1A.x_tl084.91)   40.0000              
+
+(X_U1A.x_tl084.92)  -40.0000          (X_U1A.x_tl084.99)    0.0000              
+
+(X_U1B.x_tl084.10)     .3992          (X_U1B.x_tl084.11)   14.5750              
+
+(X_U1B.x_tl084.12)   14.5750          (X_U1B.x_tl084.53)   12.6840              
+
+(X_U1B.x_tl084.54)  -12.6840          (X_U1B.x_tl084.90)-5.065E-06              
+
+(X_U1B.x_tl084.91)   40.0000          (X_U1B.x_tl084.92)  -40.0000              
+
+(X_U1B.x_tl084.99)    0.0000          
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -4.566E-02
+    V_V2        -4.565E-02
+    V_V3        -1.396E-08
+    X_U1A.x_tl084.vb   4.475E-11
+    X_U1A.x_tl084.vc   1.273E-11
+    X_U1A.x_tl084.ve   1.437E-11
+    X_U1A.x_tl084.vlim  -9.544E-09
+    X_U1A.x_tl084.vlp  -4.000E-11
+    X_U1A.x_tl084.vln  -4.000E-11
+    X_U1B.x_tl084.vb   3.389E-14
+    X_U1B.x_tl084.vc   1.269E-11
+    X_U1B.x_tl084.ve   1.442E-11
+    X_U1B.x_tl084.vlim  -5.065E-09
+    X_U1B.x_tl084.vlp  -4.000E-11
+    X_U1B.x_tl084.vln  -4.000E-11
+
+    TOTAL POWER DISSIPATION   1.37E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 06/07/23 22:35:00 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Transient"  [ C:\OrCAD projects\Opamp Circuits\FWR\FWR-PSpiceFiles\SCHEMATIC1\Transient.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        2.78
+

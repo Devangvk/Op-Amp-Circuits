@@ -1,0 +1,236 @@
+
+**** 06/05/23 21:21:56 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Transient"  [ C:\OrCAD projects\Opamp Circuits\HWR\HWR-PSpiceFiles\SCHEMATIC1\Transient.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Transient.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\devan\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 5m 0 0.1u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source HWR
+X_U1A         0 N00298 N00177 N00165 N00402 TL084
+V_V1         N00165 0 15
+V_V2         0 N00177 15
+V_V3         N00291 0  AC 0
++SIN 0 2 1k 0 0 0
+R_R1         N00291 N00298  1k TC=0,0 
+X_D1         N00298 N00402 BAT54/PLP
+R_R2         N00298 N00453  1k TC=0,0 
+X_D2         N00402 N00453 BAT54/PLP
+
+**** RESUMING Transient.cir ****
+.END
+
+**** 06/05/23 21:21:56 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Transient"  [ C:\OrCAD projects\Opamp Circuits\HWR\HWR-PSpiceFiles\SCHEMATIC1\Transient.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_D1.BAT54      X_D2.BAT54      
+          IS  211.700000E-09  211.700000E-09 
+           N    1.016           1.016        
+          BV   36              36            
+         IBV    1.196000E-06    1.196000E-06 
+          RS    2.637           2.637        
+         CJO   11.140000E-12   11.140000E-12 
+          VJ     .2013           .2013       
+           M     .3868           .3868       
+          FC    0               0            
+          EG     .69             .69         
+         XTI    2               2            
+
+
+               X_U1A.x_tl084.dx 
+          IS  800.000000E-18 
+
+
+               X_U1A.x_tl084.dy 
+          IS  800.000000E-18 
+          RS    1.000000E-03 
+         CJO   10.000000E-12 
+
+
+**** 06/05/23 21:21:56 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Transient"  [ C:\OrCAD projects\Opamp Circuits\HWR\HWR-PSpiceFiles\SCHEMATIC1\Transient.sim ] 
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1A.x_tl084.jx1 
+               NJF             
+         VTO   -1            
+        BETA  222.070000E-06 
+          IS  100.000000E-12 
+
+
+               X_U1A.x_tl084.jx2 
+               NJF             
+         VTO   -1            
+        BETA  222.070000E-06 
+          IS  100.000000E-12 
+
+
+Starting pseudo-transient algorithm.
+
+ERROR -- Convergence problem in transient bias point calculation
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00165)     .7473 (N00177)    -.7473 (N00291)    0.0000 (N00298)    -.0463     
+
+(N00402)-226.0E-09 (N00453)    -.0453 (X_U1A.x_tl084.6)-6.199E-09               
+
+(X_U1A.x_tl084.7) 54.95E-06           (X_U1A.x_tl084.8) 54.95E-06               
+
+(X_U1A.x_tl084.9)    0.0000           (X_U1A.x_tl084.10)    -.3323              
+
+(X_U1A.x_tl084.11)    -.3806          (X_U1A.x_tl084.12)    -.3469              
+
+(X_U1A.x_tl084.53)    -.8627          (X_U1A.x_tl084.54)     .8627              
+
+(X_U1A.x_tl084.90) 510.9E-12          (X_U1A.x_tl084.91)    1.9928              
+
+(X_U1A.x_tl084.92)   -1.9928          (X_U1A.x_tl084.99)    0.0000          
+
+
+  These voltages failed to converge:
+
+    V(N00402)                 =   -2.768uV  \  -226.02nV
+
+  These supply currents failed to converge:
+
+    I(X_U1A.x_tl084.egnd)     =  -393.64nA  \   -1.312uA
+    I(V_V1)                   =   -1.121mA  \   -10.00GA
+    I(V_V2)                   =   -1.274mA  \   -10.00GA
+    I(X_U1A.x_tl084.vb)       =   -1.098pA  \   -61.99fA
+    I(X_U1A.x_tl084.vc)       =   -1.685pA  \  -244.08mA
+    I(X_U1A.x_tl084.ve)       =   -1.796pA  \  -244.08mA
+    I(X_U1A.x_tl084.vlim)     =    1.152uA  \    1.104uA
+
+  These devices failed to converge:
+    X_U1A.x_tl084.dc X_U1A.x_tl084.de X_U1A.x_tl084.dp X_U1A.x_tl084.fb 
+
+ERROR(ORPSIM-15659): Discontinuing simulation due to convergence problem
+
+**** Interrupt ****
+**** Param: RELTOL = 0.001
+**** Param: ABSTOL = 1e-012
+**** Param: VNTOL = 1e-006
+**** Param: GMIN = 1e-012
+**** Param: TSTOP = 0.005
+**** Param: TMAX = 1e-007
+**** Param: ITL1 = 150
+**** Param: ITL2 = 20
+**** Param: ITL4 = 100
+**** Param: AutoConverge = 0
+**** Param: AutoConverge.ITL1 = 1000
+**** Param: AutoConverge.ITL2 = 1000
+**** Param: AutoConverge.ITL4 = 1000
+**** Param: AutoConverge.RELTOL = 0.05
+**** Param: AutoConverge.ABSTOL = 0.001
+**** Param: AutoConverge.VNTOL = 0.001
+**** Param: AutoConverge.PIVTOL = 1e-010
+**** Param: ADVCONV = 1
+**** Param: Current_Simulation = 0
+**** Param: METHOD = 0
+**** Param: TRTOL = 7
+**** Param: STEPGMIN = 0
+**** Param: GMINSTEPS = 0
+**** Param: ITL6 = 0
+**** Param: NOSTEPDEP = 0
+**** Param: PTRANSTEP = 0
+**** Param: GMINSRC = 0
+**** Param: PSEUDOTRAN = 0
+**** Param: NOSTEPSRC = 0
+
+Starting pseudo-transient algorithm (from auto-convergence).
+
+WARNING(ORPSIM-16534): Using high values of ITL4 for Speed Level > 0 may increase total simulation job time.
+
+ERROR -- Convergence problem in transient bias point calculation
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00165)     .7473 (N00177)    -.7473 (N00291)    0.0000 (N00298)    -.0463     
+
+(N00402)-226.0E-09 (N00453)    -.0453 (X_U1A.x_tl084.6)-6.199E-09               
+
+(X_U1A.x_tl084.7) 54.95E-06           (X_U1A.x_tl084.8) 54.95E-06               
+
+(X_U1A.x_tl084.9)    0.0000           (X_U1A.x_tl084.10)    -.3323              
+
+(X_U1A.x_tl084.11)    -.3806          (X_U1A.x_tl084.12)    -.3469              
+
+(X_U1A.x_tl084.53)    -.8627          (X_U1A.x_tl084.54)     .8627              
+
+(X_U1A.x_tl084.90) 510.9E-12          (X_U1A.x_tl084.91)    1.9928              
+
+(X_U1A.x_tl084.92)   -1.9928          (X_U1A.x_tl084.99)    0.0000          
+
+
+  These voltages failed to converge:
+
+    V(N00402)                 =   -2.768uV  \  -226.02nV
+
+  These supply currents failed to converge:
+
+    I(X_U1A.x_tl084.egnd)     =  -393.64nA  \   -1.312uA
+    I(V_V1)                   =   -1.121mA  \   -10.00GA
+    I(V_V2)                   =   -1.274mA  \   -10.00GA
+    I(X_U1A.x_tl084.vb)       =   -1.098pA  \   -61.99fA
+    I(X_U1A.x_tl084.vc)       =   -1.685pA  \  -244.08mA
+    I(X_U1A.x_tl084.ve)       =   -1.796pA  \  -244.08mA
+    I(X_U1A.x_tl084.vlim)     =    1.152uA  \    1.104uA
+
+  These devices failed to converge:
+    X_U1A.x_tl084.dc X_U1A.x_tl084.de X_U1A.x_tl084.dp X_U1A.x_tl084.fb 
+
+ERROR(ORPSIM-15659): Discontinuing simulation due to convergence problem
+
+**** Interrupt ****

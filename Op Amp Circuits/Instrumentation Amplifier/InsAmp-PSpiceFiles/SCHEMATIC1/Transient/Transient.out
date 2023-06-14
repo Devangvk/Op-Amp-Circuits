@@ -1,0 +1,259 @@
+
+**** 06/08/23 11:37:06 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Transient"  [ C:\OrCAD projects\Opamp Circuits\Instrumentation Amplifier\InsAmp-PSpiceFiles\SCHEMATIC1\Trans
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Transient.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\devan\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 1000 1 10e6
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source INSAMP
+X_U1A         N00433 N00811 VCC VEE N00722 TL084
+X_U1B         N00437 N00905 VCC VEE N00593 TL084
+X_U2B         N00578 N00677 VCC VEE N00665 TL084
+V_V1         VCC 0 15
+V_V2         0 VEE 15
+R_R1         N00593 N00578  1k TC=0,0 
+R_R2         0 N00578  1k TC=0,0 
+R_R3         N00677 N00665  1k TC=0,0 
+R_R4         N00722 N00677  1k TC=0,0 
+R_R5         N00811 N00722  20k TC=0,0 
+R_R6         N00905 N00593  20k TC=0,0 
+R_R7         N00905 N00811  10k TC=0,0 
+V_V4         N00433 0 0.5
+V_V5         N00437 0 DC 0Vdc AC 1Vac 
+
+**** RESUMING Transient.cir ****
+.END
+
+**** 06/08/23 11:37:06 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Transient"  [ C:\OrCAD projects\Opamp Circuits\Instrumentation Amplifier\InsAmp-PSpiceFiles\SCHEMATIC1\Trans
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1A.x_tl084.dx 
+          IS  800.000000E-18 
+
+
+               X_U1A.x_tl084.dy 
+          IS  800.000000E-18 
+          RS    1.000000E-03 
+         CJO   10.000000E-12 
+
+
+               X_U1B.x_tl084.dx 
+          IS  800.000000E-18 
+
+
+               X_U1B.x_tl084.dy 
+          IS  800.000000E-18 
+          RS    1.000000E-03 
+         CJO   10.000000E-12 
+
+
+               X_U2B.x_tl084.dx 
+          IS  800.000000E-18 
+
+
+               X_U2B.x_tl084.dy 
+          IS  800.000000E-18 
+          RS    1.000000E-03 
+         CJO   10.000000E-12 
+
+
+**** 06/08/23 11:37:06 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Transient"  [ C:\OrCAD projects\Opamp Circuits\Instrumentation Amplifier\InsAmp-PSpiceFiles\SCHEMATIC1\Trans
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1A.x_tl084.jx1 
+               NJF             
+         VTO   -1            
+        BETA  222.070000E-06 
+          IS  100.000000E-12 
+
+
+               X_U1A.x_tl084.jx2 
+               NJF             
+         VTO   -1            
+        BETA  222.070000E-06 
+          IS  100.000000E-12 
+
+
+               X_U1B.x_tl084.jx1 
+               NJF             
+         VTO   -1            
+        BETA  222.070000E-06 
+          IS  100.000000E-12 
+
+
+               X_U1B.x_tl084.jx2 
+               NJF             
+         VTO   -1            
+        BETA  222.070000E-06 
+          IS  100.000000E-12 
+
+
+               X_U2B.x_tl084.jx1 
+               NJF             
+         VTO   -1            
+        BETA  222.070000E-06 
+          IS  100.000000E-12 
+
+
+               X_U2B.x_tl084.jx2 
+               NJF             
+         VTO   -1            
+        BETA  222.070000E-06 
+          IS  100.000000E-12 
+
+
+**** 06/08/23 11:37:06 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Transient"  [ C:\OrCAD projects\Opamp Circuits\Instrumentation Amplifier\InsAmp-PSpiceFiles\SCHEMATIC1\Trans
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VCC)   15.0000  (  VEE)  -15.0000  (N00433)     .5000 (N00437)    0.0000     
+
+(N00578)    -.5000 (N00593)   -1.0000 (N00665)   -2.4998 (N00677)    -.5000     
+
+(N00722)    1.4999 (N00811)     .5000 (N00905)-10.45E-06                        
+
+(X_U1A.x_tl084.6)-156.3E-06           (X_U1A.x_tl084.7)    1.6024               
+
+(X_U1A.x_tl084.8)    1.6024           (X_U1A.x_tl084.9)    0.0000               
+
+(X_U1B.x_tl084.6) 98.24E-06           (X_U1B.x_tl084.7)   -1.0275               
+
+(X_U1B.x_tl084.8)   -1.0275           (X_U1B.x_tl084.9)    0.0000               
+
+(X_U2B.x_tl084.6) 250.1E-06           (X_U2B.x_tl084.7)   -2.5998               
+
+(X_U2B.x_tl084.8)   -2.5998           (X_U2B.x_tl084.9)    0.0000               
+
+(X_U1A.x_tl084.10)     .8984          (X_U1A.x_tl084.11)   14.5740              
+
+(X_U1A.x_tl084.12)   14.5740          (X_U1A.x_tl084.53)   12.6840              
+
+(X_U1A.x_tl084.54)  -12.6840          (X_U1A.x_tl084.90)    2.0499              
+
+(X_U1A.x_tl084.91)   40.0000          (X_U1A.x_tl084.92)  -40.0000              
+
+(X_U1A.x_tl084.99)    0.0000          (X_U1B.x_tl084.10)     .3992              
+
+(X_U1B.x_tl084.11)   14.5750          (X_U1B.x_tl084.12)   14.5750              
+
+(X_U1B.x_tl084.53)   12.6840          (X_U1B.x_tl084.54)  -12.6840              
+
+(X_U1B.x_tl084.90)    -.5500          (X_U1B.x_tl084.91)   40.0000              
+
+(X_U1B.x_tl084.92)  -40.0000          (X_U1B.x_tl084.99)    0.0000              
+
+(X_U2B.x_tl084.10)    -.1000          (X_U2B.x_tl084.11)   14.5760              
+
+(X_U2B.x_tl084.12)   14.5760          (X_U2B.x_tl084.53)   12.6840              
+
+(X_U2B.x_tl084.54)  -12.6840          (X_U2B.x_tl084.90)   -1.9999              
+
+(X_U2B.x_tl084.91)   40.0000          (X_U2B.x_tl084.92)  -40.0000              
+
+(X_U2B.x_tl084.99)    0.0000          
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -6.848E-02
+    V_V2        -6.848E-02
+    V_V4         2.145E-10
+    V_V5         2.150E-10
+    X_U1A.x_tl084.vb  -1.563E-09
+    X_U1A.x_tl084.vc   1.119E-11
+    X_U1A.x_tl084.ve   1.592E-11
+    X_U1A.x_tl084.vlim   2.050E-03
+    X_U1A.x_tl084.vlp  -3.795E-11
+    X_U1A.x_tl084.vln  -4.205E-11
+    X_U1B.x_tl084.vb   9.824E-10
+    X_U1B.x_tl084.vc   1.369E-11
+    X_U1B.x_tl084.ve   1.342E-11
+    X_U1B.x_tl084.vlim  -5.500E-04
+    X_U1B.x_tl084.vlp  -4.055E-11
+    X_U1B.x_tl084.vln  -3.945E-11
+    X_U2B.x_tl084.vb   2.501E-09
+    X_U2B.x_tl084.vc   1.518E-11
+    X_U2B.x_tl084.ve   1.192E-11
+    X_U2B.x_tl084.vlim  -2.000E-03
+    X_U2B.x_tl084.vlp  -4.200E-11
+    X_U2B.x_tl084.vln  -3.800E-11
+
+    TOTAL POWER DISSIPATION   2.05E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 06/08/23 11:37:06 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Transient"  [ C:\OrCAD projects\Opamp Circuits\Instrumentation Amplifier\InsAmp-PSpiceFiles\SCHEMATIC1\Trans
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .17
+

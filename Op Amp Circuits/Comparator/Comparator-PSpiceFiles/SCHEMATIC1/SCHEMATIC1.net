@@ -1,0 +1,10 @@
+* source COMPARATOR
+X_U1A         N00276 0 VCC VEE N00434 TL084
+V_V1         VCC 0 15
+V_V2         0 VEE 15
+V_V3         N00276 0  AC 0
++SIN 0 2 10k 0 0 0
+V_V4         N00708 0  AC 0
++SIN 0 2 10k 0 0 0
+X_U1B         N01015 N00708 VCC VEE N00744 TL084
+V_V5         N01015 0 0.5
