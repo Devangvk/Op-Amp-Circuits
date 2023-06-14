@@ -1,0 +1,162 @@
+
+**** 05/27/23 21:01:38 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Transient"  [ C:\OrCAD projects\Opamp Circuits\Integrator\Integrator-PSpiceFiles\SCHEMATIC1\Transient.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Transient.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\devan\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 10m 0 0.1u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source INTEGRATOR
+X_U1A         0 N00278 VCC VEE N00282 TL084
+V_V1         VCC 0 15
+V_V2         0 VEE 15
+R_R1         N00475 N00278  100k TC=0,0 
+R_R2         N00278 N00282  100000k TC=0,0 
+C_C1         N00278 N00282  1.59n  TC=0,0 
+V_V3         N00475 0  AC 0
++SIN 0 1 1k 0 0 0
+
+**** RESUMING Transient.cir ****
+.END
+
+**** 05/27/23 21:01:38 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Transient"  [ C:\OrCAD projects\Opamp Circuits\Integrator\Integrator-PSpiceFiles\SCHEMATIC1\Transient.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1A.x_tl084.dx 
+          IS  800.000000E-18 
+
+
+               X_U1A.x_tl084.dy 
+          IS  800.000000E-18 
+          RS    1.000000E-03 
+         CJO   10.000000E-12 
+
+
+**** 05/27/23 21:01:38 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Transient"  [ C:\OrCAD projects\Opamp Circuits\Integrator\Integrator-PSpiceFiles\SCHEMATIC1\Transient.sim ] 
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1A.x_tl084.jx1 
+               NJF             
+         VTO   -1            
+        BETA  222.070000E-06 
+          IS  100.000000E-12 
+
+
+               X_U1A.x_tl084.jx2 
+               NJF             
+         VTO   -1            
+        BETA  222.070000E-06 
+          IS  100.000000E-12 
+
+
+**** 05/27/23 21:01:38 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Transient"  [ C:\OrCAD projects\Opamp Circuits\Integrator\Integrator-PSpiceFiles\SCHEMATIC1\Transient.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VCC)   15.0000  (  VEE)  -15.0000  (N00278)-14.01E-06 (N00282)    -.0355     
+
+(N00475)    0.0000 (X_U1A.x_tl084.6) 3.348E-06                                  
+
+(X_U1A.x_tl084.7)    -.0355           (X_U1A.x_tl084.8)    -.0355               
+
+(X_U1A.x_tl084.9)    0.0000           (X_U1A.x_tl084.10)     .3992              
+
+(X_U1A.x_tl084.11)   14.5750          (X_U1A.x_tl084.12)   14.5750              
+
+(X_U1A.x_tl084.53)   12.6840          (X_U1A.x_tl084.54)  -12.6840              
+
+(X_U1A.x_tl084.90)-355.1E-09          (X_U1A.x_tl084.91)   40.0000              
+
+(X_U1A.x_tl084.92)  -40.0000          (X_U1A.x_tl084.99)    0.0000          
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -2.283E-02
+    V_V2        -2.283E-02
+    V_V3        -1.401E-10
+    X_U1A.x_tl084.vb   3.348E-11
+    X_U1A.x_tl084.vc   1.272E-11
+    X_U1A.x_tl084.ve   1.439E-11
+    X_U1A.x_tl084.vlim  -3.551E-10
+    X_U1A.x_tl084.vlp  -4.000E-11
+    X_U1A.x_tl084.vln  -4.000E-11
+
+    TOTAL POWER DISSIPATION   6.85E-01  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 05/27/23 21:01:38 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Transient"  [ C:\OrCAD projects\Opamp Circuits\Integrator\Integrator-PSpiceFiles\SCHEMATIC1\Transient.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        2.70
+

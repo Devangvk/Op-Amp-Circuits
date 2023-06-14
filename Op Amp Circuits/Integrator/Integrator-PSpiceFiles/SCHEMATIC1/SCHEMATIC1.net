@@ -1,0 +1,9 @@
+* source INTEGRATOR
+X_U1A         0 N00278 VCC VEE N00282 TL084
+V_V1         VCC 0 15
+V_V2         0 VEE 15
+R_R1         N00475 N00278  100k TC=0,0 
+R_R2         N00278 N00282  100000k TC=0,0 
+C_C1         N00278 N00282  1.59n  TC=0,0 
+V_V3         N00475 0  AC 0
++SIN 0 1 1k 0 0 0

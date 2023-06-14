@@ -1,0 +1,8 @@
+* source INVAMP
+V_V1         VCC 0 15
+V_V2         0 VEE 15
+R_R1         N00256 N00201  1k TC=0,0 
+R_R2         N00201 N00220  2k TC=0,0 
+V_V3         N00256 0  AC 0
++SIN 0 5 1k 0 0 0
+X_U1A         0 N00201 VCC VEE N00220 TL082

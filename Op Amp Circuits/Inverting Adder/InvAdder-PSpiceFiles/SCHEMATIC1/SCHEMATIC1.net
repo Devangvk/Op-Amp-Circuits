@@ -1,0 +1,11 @@
+* source INVADDER
+X_U1A         0 N00267 VCC VEE N00291 TL082
+V_V1         VCC 0 15
+V_V2         0 VEE 15
+R_R1         N00341 N00267  1k TC=0,0 
+R_R2         N00267 N00291  2k TC=0,0 
+R_R3         N00435 N00267  1k TC=0,0 
+V_V3         N00341 0  AC 0
++SIN 0 1 1k 0 0 0
+V_V4         N00435 0  AC 0
++SIN 0 3 1k 0 0 0

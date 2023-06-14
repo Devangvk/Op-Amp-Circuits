@@ -1,0 +1,162 @@
+
+**** 05/30/23 12:36:19 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Transient"  [ C:\OrCAD projects\Opamp Circuits\Differentiator\Differentiator-PSpiceFiles\SCHEMATIC1\Transien
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Transient.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\devan\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 100 1 1e6
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source DIFFERENTIATOR
+X_U1A         0 N00226 VCC VEE N00238 TL084
+V_V1         VCC 0 15
+V_V2         0 VEE 15
+R_R1         N00226 N00238  34k TC=0,0 
+R_R2         N00310 N00226  3.4k TC=0,0 
+C_C1         N00357 N00310  4.7n  TC=0,0 
+C_C2         N00226 N00238  0.47n  TC=0,0 
+V_V3         N00357 0 DC 0Vdc AC 1Vac 
+
+**** RESUMING Transient.cir ****
+.END
+
+**** 05/30/23 12:36:19 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Transient"  [ C:\OrCAD projects\Opamp Circuits\Differentiator\Differentiator-PSpiceFiles\SCHEMATIC1\Transien
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1A.x_tl084.dx 
+          IS  800.000000E-18 
+
+
+               X_U1A.x_tl084.dy 
+          IS  800.000000E-18 
+          RS    1.000000E-03 
+         CJO   10.000000E-12 
+
+
+**** 05/30/23 12:36:19 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Transient"  [ C:\OrCAD projects\Opamp Circuits\Differentiator\Differentiator-PSpiceFiles\SCHEMATIC1\Transien
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1A.x_tl084.jx1 
+               NJF             
+         VTO   -1            
+        BETA  222.070000E-06 
+          IS  100.000000E-12 
+
+
+               X_U1A.x_tl084.jx2 
+               NJF             
+         VTO   -1            
+        BETA  222.070000E-06 
+          IS  100.000000E-12 
+
+
+**** 05/30/23 12:36:19 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Transient"  [ C:\OrCAD projects\Opamp Circuits\Differentiator\Differentiator-PSpiceFiles\SCHEMATIC1\Transien
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VCC)   15.0000  (  VEE)  -15.0000  (N00226)-14.13E-06 (N00238)-21.44E-06     
+
+(N00310)-14.13E-06 (N00357)    0.0000 (X_U1A.x_tl084.6) 2.018E-09               
+
+(X_U1A.x_tl084.7)-21.45E-06           (X_U1A.x_tl084.8)-21.45E-06               
+
+(X_U1A.x_tl084.9)    0.0000           (X_U1A.x_tl084.10)     .3992              
+
+(X_U1A.x_tl084.11)   14.5750          (X_U1A.x_tl084.12)   14.5750              
+
+(X_U1A.x_tl084.53)   12.6840          (X_U1A.x_tl084.54)  -12.6840              
+
+(X_U1A.x_tl084.90)-215.0E-09          (X_U1A.x_tl084.91)   40.0000              
+
+(X_U1A.x_tl084.92)  -40.0000          (X_U1A.x_tl084.99)    0.0000          
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -2.283E-02
+    V_V2        -2.283E-02
+    V_V3         0.000E+00
+    X_U1A.x_tl084.vb   2.018E-14
+    X_U1A.x_tl084.vc   1.269E-11
+    X_U1A.x_tl084.ve   1.442E-11
+    X_U1A.x_tl084.vlim  -2.150E-10
+    X_U1A.x_tl084.vlp  -4.000E-11
+    X_U1A.x_tl084.vln  -4.000E-11
+
+    TOTAL POWER DISSIPATION   6.85E-01  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 05/30/23 12:36:19 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Transient"  [ C:\OrCAD projects\Opamp Circuits\Differentiator\Differentiator-PSpiceFiles\SCHEMATIC1\Transien
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .03
+

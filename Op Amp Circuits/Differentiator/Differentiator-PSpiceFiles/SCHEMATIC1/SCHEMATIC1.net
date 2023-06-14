@@ -1,0 +1,9 @@
+* source DIFFERENTIATOR
+X_U1A         0 N00226 VCC VEE N00238 TL084
+V_V1         VCC 0 15
+V_V2         0 VEE 15
+R_R1         N00226 N00238  34k TC=0,0 
+R_R2         N00310 N00226  3.4k TC=0,0 
+C_C1         N00357 N00310  4.7n  TC=0,0 
+C_C2         N00226 N00238  0.47n  TC=0,0 
+V_V3         N00357 0 DC 0Vdc AC 1Vac 
