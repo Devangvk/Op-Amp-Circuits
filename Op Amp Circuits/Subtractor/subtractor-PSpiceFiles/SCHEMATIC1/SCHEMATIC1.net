@@ -1,0 +1,12 @@
+* source SUBTRACTOR
+X_U1A         N00274 N00500 VCC VEE N00488 TL084
+V_V1         VCC 0 15
+V_V2         0 VEE 15
+R_R1         N00372 N00274  10k TC=0,0 
+R_R2         0 N00274  10k TC=0,0 
+V_V3         N00372 0  AC 0
++SIN 0 2 1k 0 0 0
+R_R3         N00500 N00488  10k TC=0,0 
+R_R4         N00591 N00500  10k TC=0,0 
+V_V4         N00591 0  AC 0
++SIN 0 0.5 1k 0 0 0

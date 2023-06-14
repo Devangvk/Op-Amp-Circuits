@@ -1,0 +1,8 @@
+* source NONINVAMP
+X_U1A         N00497 N00264 VCC VEE N00279 TL082
+V_V1         VCC 0 15
+V_V2         0 VEE 15
+R_R1         N00264 N00279  1k TC=0,0 
+R_R2         0 N00264  1k TC=0,0 
+V_V3         N00497 0  AC 0
++SIN 0 5 1k 0 0 0

@@ -1,0 +1,8 @@
+* source SCHMITT
+X_U1A         N00172 N00394 VCC VEE N00139 TL084
+V_V1         VCC 0 15
+V_V2         0 VEE 15
+R_R1         N00172 N00139  15k TC=0,0 
+R_R2         0 N00172  10k TC=0,0 
+V_V3         N00394 0  AC 0
++SIN 0 8 1k 0 0 0
